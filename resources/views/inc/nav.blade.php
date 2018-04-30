@@ -13,7 +13,7 @@
           <li><a href="#">Page 1-3</a></li>
         </ul>
       </li>--}}
-      <li><a href="{{url('/event')}}">Event List</a></li>
+      <li><a href="{{url('/events')}}">Event List</a></li>
       <li><a href="{{url('/about')}}">About</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
