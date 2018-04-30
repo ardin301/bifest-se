@@ -17,7 +17,7 @@
 	<div class="form-group">
         <label for="un" class ="control-label col-sm-2">Start Date</label>
  		<div class="col-sm-10">
-	        <div class='input-group date' class='datetimepicker'>
+	        <div class='input-group date' id='datetimepicker-start'>
 	            <input type='text' class="form-control" />
 	            <span class="input-group-addon">
 	                <span class="glyphicon glyphicon-calendar"></span>
@@ -29,7 +29,7 @@
 	<div class="form-group">
         <label for="un" class ="control-label col-sm-2">End Date</label>
  		<div class="col-sm-10">
-	        <div class='input-group date' class='datetimepicker'>
+	        <div class='input-group date' id='datetimepicker-end'>
 	            <input type='text' class="form-control" />
 	            <span class="input-group-addon">
 	                <span class="glyphicon glyphicon-calendar"></span>
@@ -40,9 +40,11 @@
 </form>
 @endsection
 
-
-<script type="text/javascript">
-    $(function () {
-        $('.datetimepicker').datetimepicker();
-    });
-</script>
+@section('script')
+	<script type="text/javascript">
+	    $(function () {
+	        $('#datetimepicker-start').datetimepicker();
+	        $('#datetimepicker-end').datetimepicker();
+	    });
+	</script>
+@endsection
