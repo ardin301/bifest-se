@@ -7,5 +7,6 @@ use DB;
 
 class Event extends Model
 {
-    //
+   $table = 'msevent';
+   $primaryKey = 'EventID';
 }

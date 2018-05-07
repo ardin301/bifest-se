@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 use App\Events\EraRequestWasMade;
 use Illuminate\Http\Request;
 use App\ListEvent;
+use App\CategoryList;
+use App\Ticket;
+use App\EventDetails;
+use App\Event;
 
 
 class ListEventController extends Controller
@@ -29,7 +33,8 @@ class ListEventController extends Controller
      */
     public function create()
     {
-        return view('events.create');
+        $categories = CategoryList::all(['CategoryID','CategoryName']);
+        return view('events.create')->with('categories',$categories);
     }
 
     /**
@@ -40,7 +45,14 @@ class ListEventController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $event = new Event;
+        $eventDetails = new EventDetails;
+        $ticket = new Ticket;
+
+        
+
+
+        return 123;
     }
 
     /**
