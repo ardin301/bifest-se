@@ -6,7 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Ticket extends Model
 {
-	$table = 'msticket';
-	$primaryKey = 'TicketID';
+	protected $table = 'msticket';
+	public $primaryKey = 'TicketID';
+	public $timestamps = false;
     //
 }

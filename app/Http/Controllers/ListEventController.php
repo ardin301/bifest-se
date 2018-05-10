@@ -48,11 +48,46 @@ class ListEventController extends Controller
         $event = new Event;
         $eventDetails = new EventDetails;
         $ticket = new Ticket;
+        $eID;
+        $tID;
+        $uID = 1;
 
+        $ticket = new Ticket;
+        $ticket->TicketQuantity = $request->input('ticketAvailable');
+        $ticket->TicketPrice = $request->input("ticketPrice");
+
+
+        $event = new Event;
+        $tempDate = $request->input('eventSD');
         
+        
+        $event->EventStartDate = $request->input('eventSD');
+        $event->EventEndDate = $request->input('eventED');
 
 
-        return 123;
+
+        $details = new EventDetails;
+        $details->EventName = $request->input('eventName');
+        $details->EventDescription = $request->input('eventDesc');
+        $details->EventLocation = $request->input('eventLocation');
+        $details->CategoryID = $request->input('categoryID');
+      
+        $ticket->save();
+        $tID = $ticket->TicketID;
+        $event->save();
+        $eID = $event->EventID;
+
+
+
+        $details->EventID = $eID;
+        $details->UserID = $uID;
+        $details->TicketID = $tID;
+
+        $details->save();
+
+
+
+        return redirect('/events');
     }
 
     /**

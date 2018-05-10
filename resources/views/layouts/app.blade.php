@@ -32,10 +32,10 @@
     <script type="text/javascript">
         $(function () {
             $('#datetimepicker-start').datetimepicker({
-                format: 'DD/MMMM/YYYY HH:mm'
+                format: 'DD/MM/YYYY HH:mm'
             });
             $('#datetimepicker-end').datetimepicker({
-                format: 'DD/MMMM/YYYY HH:mm'
+                format: 'DD/MM/YYYY HH:mm'
             });
         });
     </script>

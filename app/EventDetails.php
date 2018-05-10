@@ -7,5 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class EventDetails extends Model
 {
     //
-    $table = 'eventdetails';
+    protected $table = 'eventdetails';
+    public $timestamps = false;
+
 }

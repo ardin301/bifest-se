@@ -7,6 +7,8 @@ use DB;
 
 class Event extends Model
 {
-   $table = 'msevent';
-   $primaryKey = 'EventID';
+   protected $table = 'msevent';
+   public $primaryKey = 'EventID';
+   public $timestamps = false;
+
 }

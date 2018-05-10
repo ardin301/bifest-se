@@ -18,7 +18,7 @@
 	<div class="form-group">
         <label for="un" class ="control-label col-sm-2">Event Location</label>
  		<div class="col-sm-10">
-			<input type="text" name="startDate" class="form-control">
+			<input type="text" name="eventLocation" class="form-control">
 		</div>
 	</div>
 
@@ -37,7 +37,7 @@
 	<div class="form-group">
         <label for="un" class ="control-label col-sm-2">Event Description</label>
  		<div class="col-sm-10">
-			<textarea class="form-control" placeholder="Description Goes Here"></textarea>
+			<textarea class="form-control" placeholder="Description Goes Here" name="eventDesc"></textarea>
 		</div>
 	</div>
 
@@ -46,7 +46,7 @@
         <label for="sd" class ="control-label col-sm-2">Start Date</label>
  		<div class="col-sm-10">
 	        <div class='input-group date' id='datetimepicker-start'>
-	            <input type='text' class="form-control" id="sd" name="startDate" />
+	            <input type='text' class="form-control" id="sd" name="eventSD" />
 	            <span class="input-group-addon">
 	                <span class="glyphicon glyphicon-calendar"></span>
 	            </span>
@@ -58,7 +58,7 @@
         <label for="ed" class ="control-label col-sm-2">End Date</label>
  		<div class="col-sm-10">
 	        <div class='input-group date' id='datetimepicker-end'>
-	            <input type='text' class="form-control" id="ed" name="endDate" />
+	            <input type='text' class="form-control" id="ed" name="eventED" />
 	            <span class="input-group-addon">
 	                <span class="glyphicon glyphicon-calendar"></span>
 	            </span>
@@ -69,14 +69,14 @@
 	<div class="form-group">
         <label for="un" class ="control-label col-sm-2">Ticket Available</label>
  		<div class="col-sm-10">
-			<input type="number" name="startDate" class="form-control" min="0">
+			<input type="number" name="ticketAvailable" class="form-control" min="0">
 		</div>
 	</div>
 
 	<div class="form-group">
         <label for="un" class ="control-label col-sm-2">Ticket Price</label>
  		<div class="col-sm-10">
-			<input type="number" name="startDate" class="form-control" min="0">
+			<input type="number" name="ticketPrice" class="form-control" min="0">
 		</div>
 	</div>
 	
