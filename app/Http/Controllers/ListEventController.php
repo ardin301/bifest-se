@@ -58,11 +58,12 @@ class ListEventController extends Controller
 
 
         $event = new Event;
-        $tempDate = $request->input('eventSD');
+        $tempSDate = date('y-m-d H:i',strtotime(strtr($request->input('eventSD'),'/','-')));
+        $tempEDate = date('y-m-d H:i',strtotime(strtr($request->input('eventED'),'/','-')));
         
         
-        $event->EventStartDate = $request->input('eventSD');
-        $event->EventEndDate = $request->input('eventED');
+        $event->EventStartDate = $tempSDate;
+        $event->EventEndDate =$tempEDate;
 
 
 
